@@ -25,14 +25,21 @@ Execute the following bash command:
 import funcs
 ```
 
-### 1. image2text
+### 1. chat
+
+```python
+result = funcs.chat('hello!')
+print(result)
+```
+
+### 2. image2text
 
 ```python
 result = funcs.image2text('./data/image01.jpg', prompt='What’s in this image?')
 print(result)
 ```
 
-### 2. text2image
+### 3. text2image
 
 ```python
 funcs.text2image('a putty cat', filename='cat.jpg')
