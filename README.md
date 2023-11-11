@@ -28,6 +28,12 @@ import funcs
 ### 1. image2text
 
 ```python
-result = funcs.image2text('./data/image01.jpg', 'What’s in this image?')
+result = funcs.image2text('./data/image01.jpg', prompt='What’s in this image?')
 print(result)
+```
+
+### 2. text2image
+
+```python
+funcs.text2image('a putty cat', filename='cat.jpg')
 ```

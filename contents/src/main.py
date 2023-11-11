@@ -1,4 +1,3 @@
-from funcs.image2text import image2text
+import funcs
 
-result = image2text('./data/image01.jpg', 'What this image?')
-print(result)
+resp = funcs.text2image('a putty cat', './../data/image03.jpg')

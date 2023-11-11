@@ -4,10 +4,11 @@ RUN apt-get update && \
     apt-get install -y libgl1-mesa-glx && \
     rm -rf /var/lib/apt/lists/*
 
-WORKDIR /contents/src
+WORKDIR /contents
 RUN pip install --upgrade pip
-RUN pip install openai
-RUN pip install ipython
+COPY ./tutorial_env/requirements.txt /contents/requirements.txt
+RUN pip install -r requirements.txt
+WORKDIR /contents/src
 
 # env
 ARG OPENAI_API_KEY
